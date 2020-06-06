@@ -1223,7 +1223,7 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #1acc8d;
+  background: rgba(1, 4, 136);
   color: #fff;
 }
 
@@ -1607,4 +1607,8 @@ section {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;
   }
+}
+
+.nav-btn-icon {
+  color: rgba(1, 4, 136);
 }

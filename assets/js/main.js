@@ -116,17 +116,17 @@
   });
 
   // Toggle .header-scrolled class to #header when page is scrolled
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('#header').addClass('header-scrolled');
-    } else {
-      $('#header').removeClass('header-scrolled');
-    }
-  });
+  // $(window).scroll(function() {
+  //   if ($(this).scrollTop() > 100) {
+       $('#header').addClass('header-scrolled');
+  //   } else {
+  //     $('#header').removeClass('header-scrolled');
+  //   }
+  // });
 
-  if ($(window).scrollTop() > 100) {
-    $('#header').addClass('header-scrolled');
-  }
+  // if ($(window).scrollTop() > 100) {
+  //   $('#header').addClass('header-scrolled');
+  // }
 
   // Back to top button
   $(window).scroll(function() {
@@ -161,12 +161,12 @@
   });
 
   // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
+  //$(".testimonials-carousel").owlCarousel({
+  //  autoplay: true,
+  //  dots: true,
+  //  loop: true,
+  //  items: 1
+  //});
 
   // Initi AOS
   AOS.init({
