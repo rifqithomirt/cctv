@@ -1,179 +1,125 @@
-/**
-* Template Name: Bootslander - v2.1.0
-* Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-!(function($) {
-  "use strict";
+!(function(e) {
+    "use strict";
+    if (
+        (e(window).on("load", function() {
+                e("#preloader").length &&
+                    e("#preloader")
+                    .delay(100)
+                    .fadeOut("slow", function() {
+                        e(this).remove();
+                    });
+            }),
+            e(document).on("click", ".nav-menu a, .mobile-nav a, .scrollto", function(o) {
+                if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+                    o.preventDefault();
+                    var n = e(this.hash);
+                    if (n.length) {
+                        var a = n.offset().top;
+                        return (
+                            e("#header").length && ((a -= e("#header").outerHeight()), e("#header").hasClass("header-scrolled") || (a += 20)),
+                            "#header" == e(this).attr("href") && (a = 0),
+                            e("html, body").animate({ scrollTop: a }, 1500, "easeInOutExpo"),
+                            e(this).parents(".nav-menu, .mobile-nav").length && (e(".nav-menu .active, .mobile-nav .active").removeClass("active"), e(this).closest("li").addClass("active")),
+                            e("body").hasClass("mobile-nav-active") && (e("body").removeClass("mobile-nav-active"), e(".mobile-nav-toggle i").toggleClass("icofont-navigation-menu icofont-close"), e(".mobile-nav-overly").fadeOut()),
+                            !1
+                        );
+                    }
+                }
+            }),
+            e(".nav-menu").length)
+    ) {
+        var o = e(".nav-menu").clone().prop({ class: "mobile-nav d-lg-none" });
+        e("body").append(o),
+            e("body").prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>'),
+            e("body").append('<div class="mobile-nav-overly"></div>'),
+            e(document).on("click", ".mobile-nav-toggle", function(o) {
+                e("body").toggleClass("mobile-nav-active"), e(".mobile-nav-toggle i").toggleClass("icofont-navigation-menu icofont-close"), e(".mobile-nav-overly").toggle();
+            }),
+            e(document).on("click", ".mobile-nav .drop-down > a", function(o) {
+                o.preventDefault(), e(this).next().slideToggle(300), e(this).parent().toggleClass("active");
+            }),
+            e(document).click(function(o) {
+                var n = e(".mobile-nav, .mobile-nav-toggle");
+                n.is(o.target) ||
+                    0 !== n.has(o.target).length ||
+                    (e("body").hasClass("mobile-nav-active") && (e("body").removeClass("mobile-nav-active"), e(".mobile-nav-toggle i").toggleClass("icofont-navigation-menu icofont-close"), e(".mobile-nav-overly").fadeOut()));
+            });
+    } else e(".mobile-nav, .mobile-nav-toggle").length && e(".mobile-nav, .mobile-nav-toggle").hide();
+    var n = e("section"),
+        a = e(".nav-menu, .mobile-nav");
+    e(window).on("scroll", function() {
+            var o = e(this).scrollTop() + 80;
+            n.each(function() {
+                var n = e(this).offset().top,
+                    t = n + e(this).outerHeight();
+                o >= n &&
+                    o <= t &&
+                    (o <= t && a.find("li").removeClass("active"),
+                        a
+                        .find('a[href="#' + e(this).attr("id") + '"]')
+                        .parent("li")
+                        .addClass("active")),
+                    o < 300 && e(".nav-menu ul:first li:first, .mobile-menu ul:first li:first").addClass("active");
+            });
+        }),
+        e(window).scroll(function() {
+            e(this).scrollTop() > 100 ? e("#header").addClass("header-scrolled") : e("#header").removeClass("header-scrolled");
+        }),
+        e(window).scrollTop() > 100 && e("#header").addClass("header-scrolled"),
+        e(window).scroll(function() {
+            e(this).scrollTop() > 100 ? e(".back-to-top").fadeIn("slow") : e(".back-to-top").fadeOut("slow");
+        }),
+        e(window).on("load", function() {
+            e(".venobox").venobox();
+        }),
+        e(document).ready(function() {
+            e(".venobox").venobox();
+        }),
+        AOS.init({ duration: 1e3, easing: "ease-in-out", once: !0, mirror: !1 });
 
-  // Preloader
-  $(window).on('load', function() {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
-        $(this).remove();
-      });
-    }
-  });
 
-  // Smooth scroll for the navigation menu and links with .scrollto classes
-  $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      e.preventDefault();
-      var target = $(this.hash);
-      if (target.length) {
-
-        var scrollto = target.offset().top;
-        var scrolled = 20;
-
-        if ($('#header').length) {
-          scrollto -= $('#header').outerHeight()
-
-          if (!$('#header').hasClass('header-scrolled')) {
-            scrollto += scrolled;
-          }
+    $('#modal-detail').on('click', function() {
+        var objDetail = {
+            "spc4channel": [{
+                "nama": "CCTV Camera Indoor SPC",
+                "qty": "3",
+                "unit": "pcs"
+            }, {
+                "nama": "CCTV Camera Outdoor SPC",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "DVR SPC 4 Channel",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Hard Disk Seagate Skyhawk 500gb",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Power Supply Single 10A",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Kabel RG59 + Power SPC",
+                "qty": "50",
+                "unit": "m"
+            }, {
+                "nama": "Konektor BNC",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Kabel HDMI",
+                "qty": "1",
+                "unit": "pcs"
+            }]
         }
-
-        if ($(this).attr("href") == '#header') {
-          scrollto = 0;
-        }
-
-        $('html, body').animate({
-          scrollTop: scrollto
-        }, 1500, 'easeInOutExpo');
-
-        if ($(this).parents('.nav-menu, .mobile-nav').length) {
-          $('.nav-menu .active, .mobile-nav .active').removeClass('active');
-          $(this).closest('li').addClass('active');
-        }
-
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-          $('.mobile-nav-overly').fadeOut();
-        }
-        return false;
-      }
-    }
-  });
-
-  // Mobile Navigation
-  if ($('.nav-menu').length) {
-    var $mobile_nav = $('.nav-menu').clone().prop({
-      class: 'mobile-nav d-lg-none'
+        var str = '';
+        objDetail.spc4channel.forEach(function( obj ){
+          str += '<tr><td class="p-1">'+ obj.nama +'</td><td class="p-1">'+ obj.qty+ ' ' + obj.unit  +'</td></tr>';
+          $('.body-modal-1').empty().html(str);
+          $('.modal-1').modal('show');
+        });
     });
-    $('body').append($mobile_nav);
-    $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
-    $('body').append('<div class="mobile-nav-overly"></div>');
-
-    $(document).on('click', '.mobile-nav-toggle', function(e) {
-      $('body').toggleClass('mobile-nav-active');
-      $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-      $('.mobile-nav-overly').toggle();
-    });
-
-    $(document).on('click', '.mobile-nav .drop-down > a', function(e) {
-      e.preventDefault();
-      $(this).next().slideToggle(300);
-      $(this).parent().toggleClass('active');
-    });
-
-    $(document).click(function(e) {
-      var container = $(".mobile-nav, .mobile-nav-toggle");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-          $('.mobile-nav-overly').fadeOut();
-        }
-      }
-    });
-  } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
-    $(".mobile-nav, .mobile-nav-toggle").hide();
-  }
-
-  // Navigation active state on scroll
-  var nav_sections = $('section');
-  var main_nav = $('.nav-menu, .mobile-nav');
-
-  $(window).on('scroll', function() {
-    var cur_pos = $(this).scrollTop() + 80;
-
-    nav_sections.each(function() {
-      var top = $(this).offset().top,
-        bottom = top + $(this).outerHeight();
-
-      if (cur_pos >= top && cur_pos <= bottom) {
-        if (cur_pos <= bottom) {
-          main_nav.find('li').removeClass('active');
-        }
-        main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
-      }
-      if (cur_pos < 300) {
-        $(".nav-menu ul:first li:first, .mobile-menu ul:first li:first").addClass('active');
-      }
-    });
-  });
-
-  // Toggle .header-scrolled class to #header when page is scrolled
-  // $(window).scroll(function() {
-  //   if ($(this).scrollTop() > 100) {
-       $('#header').addClass('header-scrolled');
-  //   } else {
-  //     $('#header').removeClass('header-scrolled');
-  //   }
-  // });
-
-  // if ($(window).scrollTop() > 100) {
-  //   $('#header').addClass('header-scrolled');
-  // }
-
-  // Back to top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-    }
-  });
-
-  // $('.back-to-top').click(function() {
-  //   $('html, body').animate({
-  //     scrollTop: 0
-  //   }, 1500, 'easeInOutExpo');
-  //   return false;
-  // });
-
-  // Initiate the venobox plugin
-  $(window).on('load', function() {
-    $('.venobox').venobox();
-  });
-
-  // jQuery counterUp
-  // $('[data-toggle="counter-up"]').counterUp({
-  //   delay: 10,
-  //   time: 1000
-  // });
-
-  // Initiate venobox lightbox
-  $(document).ready(function() {
-    $('.venobox').venobox();
-  });
-
-  // Testimonials carousel (uses the Owl Carousel library)
-  //$(".testimonials-carousel").owlCarousel({
-  //  autoplay: true,
-  //  dots: true,
-  //  loop: true,
-  //  items: 1
-  //});
-
-  // Initi AOS
-  AOS.init({
-    duration: 1000,
-    easing: "ease-in-out",
-    once: true,
-    mirror: false
-  });
 
 })(jQuery);
