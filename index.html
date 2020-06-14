@@ -111,10 +111,14 @@
                         <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
                             <h3>4 Channel SPC</h3>
                             <h4><sup>Rp. </sup>2.399.000<span></h4>
-                            <img src="./assets/img/about.png" alt="..." class="img-fluid">
-                            <div class="desc">
-                                <p>DVR 4 Channel</p>
-                            </div>
+                            <ul>
+                                <li class="py-1">CCTV SPC Indoor 2MP 3pcs</li>
+                                <li class="py-1">CCTV SPC Outdor 2MP 1pcs</li>
+                                <li class="py-1">DVR SPC 4 Channel</li>
+                                <li class="py-1">Hardisk</li>
+                                <li class="py-1">Power Supply CCTV</li>
+                                <li class="py-1">Kabel Coaxial</li>
+                            </ul>
                             <div class="btn-wrap">
                                 <a href="#" class="btn-buy" data-target=".bd-example-modal-sm" data-toggle="modal">Detail</a>
                             </div>
@@ -153,9 +157,25 @@
                     </div>
                 </div>
                 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-sm">
+                    <div class="modal-dialog modal-lg justify-content-center">
                         <div class="modal-content">
-                            ...
+                            <div class="row">
+                                <div class="col-10">
+                                    <img src="./assets/img/about.png" alt="..." class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-10">
+                                    <ul>
+                                        <li class="py-1">CCTV SPC Indoor 2MP 3pcs</li>
+                                        <li class="py-1">CCTV SPC Outdor 2MP 1pcs</li>
+                                        <li class="py-1">DVR SPC 4 Channel</li>
+                                        <li class="py-1">Hardisk</li>
+                                        <li class="py-1">Power Supply CCTV</li>
+                                        <li class="py-1">Kabel Coaxial</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -536,14 +556,26 @@ HARGA PAKET CCTV PALEMBANG -->
     <script src="assets/vendor/aos/aos.js"></script>
     <!-- Template Main JS File -->
     <script>
-    ! function(e) { "use strict"; if (e(window).on("load", function() { e("#preloader").length && e("#preloader").delay(100).fadeOut("slow", function() { e(this).remove() }) }), e(document).on("click", ".nav-menu a, .mobile-nav a, .scrollto", function(o) { if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) { o.preventDefault(); var n = e(this.hash); if (n.length) { var a = n.offset().top; return e("#header").length && (a -= e("#header").outerHeight(), e("#header").hasClass("header-scrolled") || (a += 20)), "#header" == e(this).attr("href") && (a = 0), e("html, body").animate({ scrollTop: a }, 1500, "easeInOutExpo"), e(this).parents(".nav-menu, .mobile-nav").length && (e(".nav-menu .active, .mobile-nav .active").removeClass("active"), e(this).closest("li").addClass("active")), e("body").hasClass("mobile-nav-active") && (e("body").removeClass("mobile-nav-active"), e(".mobile-nav-toggle i").toggleClass("icofont-navigation-menu icofont-close"), e(".mobile-nav-overly").fadeOut()), !1 } } }), e(".nav-menu").length) { var o = e(".nav-menu").clone().prop({ class: "mobile-nav d-lg-none" });
-            e("body").append(o), e("body").prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>'), e("body").append('<div class="mobile-nav-overly"></div>'), e(document).on("click", ".mobile-nav-toggle", function(o) { e("body").toggleClass("mobile-nav-active"), e(".mobile-nav-toggle i").toggleClass("icofont-navigation-menu icofont-close"), e(".mobile-nav-overly").toggle() }), e(document).on("click", ".mobile-nav .drop-down > a", function(o) { o.preventDefault(), e(this).next().slideToggle(300), e(this).parent().toggleClass("active") }), e(document).click(function(o) { var n = e(".mobile-nav, .mobile-nav-toggle");
-                n.is(o.target) || 0 !== n.has(o.target).length || e("body").hasClass("mobile-nav-active") && (e("body").removeClass("mobile-nav-active"), e(".mobile-nav-toggle i").toggleClass("icofont-navigation-menu icofont-close"), e(".mobile-nav-overly").fadeOut()) }) } else e(".mobile-nav, .mobile-nav-toggle").length && e(".mobile-nav, .mobile-nav-toggle").hide(); var n = e("section"),
+    ! function(e) {
+        "use strict";
+        if (e(window).on("load", function() { e("#preloader").length && e("#preloader").delay(100).fadeOut("slow", function() { e(this).remove() }) }), e(document).on("click", ".nav-menu a, .mobile-nav a, .scrollto", function(o) { if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) { o.preventDefault(); var n = e(this.hash); if (n.length) { var a = n.offset().top; return e("#header").length && (a -= e("#header").outerHeight(), e("#header").hasClass("header-scrolled") || (a += 20)), "#header" == e(this).attr("href") && (a = 0), e("html, body").animate({ scrollTop: a }, 1500, "easeInOutExpo"), e(this).parents(".nav-menu, .mobile-nav").length && (e(".nav-menu .active, .mobile-nav .active").removeClass("active"), e(this).closest("li").addClass("active")), e("body").hasClass("mobile-nav-active") && (e("body").removeClass("mobile-nav-active"), e(".mobile-nav-toggle i").toggleClass("icofont-navigation-menu icofont-close"), e(".mobile-nav-overly").fadeOut()), !1 } } }), e(".nav-menu").length) {
+            var o = e(".nav-menu").clone().prop({ class: "mobile-nav d-lg-none" });
+            e("body").append(o), e("body").prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>'), e("body").append('<div class="mobile-nav-overly"></div>'), e(document).on("click", ".mobile-nav-toggle", function(o) { e("body").toggleClass("mobile-nav-active"), e(".mobile-nav-toggle i").toggleClass("icofont-navigation-menu icofont-close"), e(".mobile-nav-overly").toggle() }), e(document).on("click", ".mobile-nav .drop-down > a", function(o) { o.preventDefault(), e(this).next().slideToggle(300), e(this).parent().toggleClass("active") }), e(document).click(function(o) {
+                var n = e(".mobile-nav, .mobile-nav-toggle");
+                n.is(o.target) || 0 !== n.has(o.target).length || e("body").hasClass("mobile-nav-active") && (e("body").removeClass("mobile-nav-active"), e(".mobile-nav-toggle i").toggleClass("icofont-navigation-menu icofont-close"), e(".mobile-nav-overly").fadeOut())
+            })
+        } else e(".mobile-nav, .mobile-nav-toggle").length && e(".mobile-nav, .mobile-nav-toggle").hide();
+        var n = e("section"),
             a = e(".nav-menu, .mobile-nav");
-        e(window).on("scroll", function() { var o = e(this).scrollTop() + 80;
-            n.each(function() { var n = e(this).offset().top,
+        e(window).on("scroll", function() {
+            var o = e(this).scrollTop() + 80;
+            n.each(function() {
+                var n = e(this).offset().top,
                     t = n + e(this).outerHeight();
-                o >= n && o <= t && (o <= t && a.find("li").removeClass("active"), a.find('a[href="#' + e(this).attr("id") + '"]').parent("li").addClass("active")), o < 300 && e(".nav-menu ul:first li:first, .mobile-menu ul:first li:first").addClass("active") }) }), e(window).scroll(function() { e(this).scrollTop() > 100 ? e("#header").addClass("header-scrolled") : e("#header").removeClass("header-scrolled") }), e(window).scrollTop() > 100 && e("#header").addClass("header-scrolled"), e(window).scroll(function() { e(this).scrollTop() > 100 ? e(".back-to-top").fadeIn("slow") : e(".back-to-top").fadeOut("slow") }), e(window).on("load", function() { e(".venobox").venobox() }), e(document).ready(function() { e(".venobox").venobox() }), AOS.init({ duration: 1e3, easing: "ease-in-out", once: !0, mirror: !1 }) }(jQuery);
+                o >= n && o <= t && (o <= t && a.find("li").removeClass("active"), a.find('a[href="#' + e(this).attr("id") + '"]').parent("li").addClass("active")), o < 300 && e(".nav-menu ul:first li:first, .mobile-menu ul:first li:first").addClass("active")
+            })
+        }), e(window).scroll(function() { e(this).scrollTop() > 100 ? e("#header").addClass("header-scrolled") : e("#header").removeClass("header-scrolled") }), e(window).scrollTop() > 100 && e("#header").addClass("header-scrolled"), e(window).scroll(function() { e(this).scrollTop() > 100 ? e(".back-to-top").fadeIn("slow") : e(".back-to-top").fadeOut("slow") }), e(window).on("load", function() { e(".venobox").venobox() }), e(document).ready(function() { e(".venobox").venobox() }), AOS.init({ duration: 1e3, easing: "ease-in-out", once: !0, mirror: !1 })
+    }(jQuery);
     </script>
 </body>
 
