@@ -78,8 +78,7 @@
         AOS.init({ duration: 1e3, easing: "ease-in-out", once: !0, mirror: !1 });
 
 
-    $('#modal-detail').on('click', function() {
-        var objDetail = {
+var objDetail = {
             "spc4channel": [{
                 "nama": "CCTV Camera Indoor SPC",
                 "qty": "3",
@@ -112,13 +111,183 @@
                 "nama": "Kabel HDMI",
                 "qty": "1",
                 "unit": "pcs"
+            }],
+            "spc8channel": [{
+                "nama": "CCTV Camera Indoor SPC",
+                "qty": "6",
+                "unit": "pcs"
+            }, {
+                "nama": "CCTV Camera Outdoor SPC",
+                "qty": "2",
+                "unit": "pcs"
+            }, {
+                "nama": "DVR SPC 4 Channel",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Hard Disk Seagate Skyhawk 500gb",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Power Supply Single 10A",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Kabel RG59 + Power SPC",
+                "qty": "50",
+                "unit": "m"
+            }, {
+                "nama": "Konektor BNC",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Kabel HDMI",
+                "qty": "1",
+                "unit": "pcs"
+            }],
+            "hikvision4channel": [{
+                "nama": "CCTV Camera Indoor HIKVISION",
+                "qty": "3",
+                "unit": "pcs"
+            }, {
+                "nama": "CCTV Camera Outdoor HIKVISION",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "DVR HIKVISION 4 Channel",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Hard Disk Seagate Skyhawk 500gb",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Power Supply Single 10A",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Kabel RG59 + Power HIKVISION",
+                "qty": "50",
+                "unit": "m"
+            }, {
+                "nama": "Konektor BNC",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Kabel HDMI",
+                "qty": "1",
+                "unit": "pcs"
             }]
-        }
+
+            ,
+            "hikvision8channel": [{
+                "nama": "Hikvision Camera Indoor SPC",
+                "qty": "6",
+                "unit": "pcs"
+            }, {
+                "nama": "CCTV Camera Outdoor Hikvision",
+                "qty": "2",
+                "unit": "pcs"
+            }, {
+                "nama": "DVR SPC 8 Channel",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Hard Disk Seagate Skyhawk 500gb",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Power Supply Single 20A",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Kabel RG59 + Power SPC",
+                "qty": "50",
+                "unit": "m"
+            }, {
+                "nama": "Konektor BNC",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Kabel HDMI",
+                "qty": "1",
+                "unit": "pcs"
+            }],
+            "hikvision8channel": [{
+                "nama": "CCTV Camera Indoor HIKVISION",
+                "qty": "6",
+                "unit": "pcs"
+            }, {
+                "nama": "CCTV Camera Outdoor HIKVISION",
+                "qty": "2",
+                "unit": "pcs"
+            }, {
+                "nama": "DVR HIKVISION 8 Channel",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Hard Disk Seagate Skyhawk 500gb",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Power Supply Single 20A",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Kabel RG59 + Power HIKVISION",
+                "qty": "50",
+                "unit": "m"
+            }, {
+                "nama": "Konektor BNC",
+                "qty": "1",
+                "unit": "pcs"
+            }, {
+                "nama": "Kabel HDMI",
+                "qty": "1",
+                "unit": "pcs"
+            }]
+        };
+
+    $('#cancel-modal').on('click', function() {
+        $('.modal-1').modal('hide');
+        $('#beli-modal').removeAttr('produk');
+    });
+    $('#modal-detail-1').on('click', function() {
         var str = '';
         objDetail.spc4channel.forEach(function( obj ){
           str += '<tr><td class="p-1">'+ obj.nama +'</td><td class="p-1">'+ obj.qty+ ' ' + obj.unit  +'</td></tr>';
           $('.body-modal-1').empty().html(str);
           $('.modal-1').modal('show');
+          $('#beli-modal').attr('produk', 'SPC 4 Channel');
+        });
+    });
+    $('#modal-detail-2').on('click', function() {
+        var str = '';
+        objDetail.hikvision4channel.forEach(function( obj ){
+          str += '<tr><td class="p-1">'+ obj.nama +'</td><td class="p-1">'+ obj.qty+ ' ' + obj.unit  +'</td></tr>';
+          $('.body-modal-1').empty().html(str);
+          $('.modal-1').modal('show');
+          $('#beli-modal').attr('produk', 'HIKVISION 4 Channel');
+        });
+    });
+
+    $('#modal-detail-3').on('click', function() {
+        var str = '';
+        objDetail.spc8channel.forEach(function( obj ){
+          str += '<tr><td class="p-1">'+ obj.nama +'</td><td class="p-1">'+ obj.qty+ ' ' + obj.unit  +'</td></tr>';
+          $('.body-modal-1').empty().html(str);
+          $('.modal-1').modal('show');
+          $('#beli-modal').attr('produk', 'SPC 8 Channel');
+        });
+    });
+
+    $('#modal-detail-4').on('click', function() {
+        var str = '';
+        objDetail.hikvision8channel.forEach(function( obj ){
+          str += '<tr><td class="p-1">'+ obj.nama +'</td><td class="p-1">'+ obj.qty+ ' ' + obj.unit  +'</td></tr>';
+          $('.body-modal-1').empty().html(str);
+          $('.modal-1').modal('show');
+          $('#beli-modal').attr('produk', 'HIKVISION 4 Channel');
         });
     });
 
