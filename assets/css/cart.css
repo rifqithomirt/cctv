@@ -3,5 +3,20 @@
 }
 
 #main .quantity-field {
-  width: 50px;
+  width: 30px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.product-desc {
+  font-size: 0.8em;
+}
+
+.product-name {
+  font-size: 1em;
+}
+
+.summary {
+  width: 100%;
 }
